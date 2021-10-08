@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="ROOMS" />
+    <meta name="author" content="Shruti" />
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+
+    <!-- JQuery Import -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- BootStrap CSS and JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Socket IO -->
+    <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Smart Light Simulation</title>
+
+</head>
+
+<body>S
+
+    <div class="jumbotron d-flex align-items-center" style="background: none;" >
+        <div class="container d-flex justify-content-center align-items-center">
+            <div style="overflow: auto; height: 75vh; width: 90vw;">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Room Number</th>
+                        <th>Control Room</th>
+                      </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr class="room_B1" onclick="redirectToRoom('B1', '/');" >
+                            <td class="room_B1"> Room Number 1</b> </td>
+                            <td class="room_B1"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B2" onclick="redirectToRoom('B2', '/');" >
+                            <td class="room_B2"> Room Number 2</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B3" onclick="redirectToRoom('B3', '/');" >
+                            <td class="room_B3"> Room Number 3</b> </td>
+                            <td class="room_B3"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B4" onclick="redirectToRoom('B4', '/');" >
+                            <td class="room_B4"> Room Number 4</b> </td>
+                            <td class="room_B4"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B5" onclick="redirectToRoom('B5', '/');" >
+                            <td class="room_B5"> Room Number 5</b> </td>
+                            <td class="room_B5"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B6" onclick="redirectToRoom('B6', '/');" >
+                            <td class="room_B6"> Room Number 6</b> </td>
+                            <td class="room_B6"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B7" onclick="redirectToRoom('B7', '/');" >
+                            <td class="room_B7"> Room Number 7</b> </td>
+                            <td class="room_B7"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B8" onclick="redirectToRoom('B8', '/');" >
+                            <td class="room_B8"> Room Number 8</b> </td>
+                            <td class="room_B8"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B9" onclick="redirectToRoom('B9', '/');" >
+                            <td class="room_B9"> Room Number 9</b> </td>
+                            <td class="room_B9"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B10" onclick="redirectToRoom('B10', '/');" >
+                            <td class="room_B2"> Room Number 10</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B11" onclick="redirectToRoom('B11', '/');" >
+                            <td class="room_B2"> Room Number 11</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B12" onclick="redirectToRoom('B12', '/');" >
+                            <td class="room_B2"> Room Number 12</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B2" onclick="redirectToRoom('B13', '/');" >
+                            <td class="room_B2"> Room Number 13</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B2" onclick="redirectToRoom('B14', '/');" >
+                            <td class="room_B2"> Room Number 14</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B2" onclick="redirectToRoom('B15', '/');" >
+                            <td class="room_B2"> Room Number 15</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B12" onclick="redirectToRoom('B16', '/');" >
+                            <td class="room_B2"> Room Number 16</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B2" onclick="redirectToRoom('B17', '/');" >
+                            <td class="room_B2"> Room Number 17</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B2" onclick="redirectToRoom('B18', '/');" >
+                            <td class="room_B2"> Room Number 18</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B2" onclick="redirectToRoom('B19', '/');" >
+                            <td class="room_B2"> Room Number 19</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B1" onclick="redirectToRoom('B20', '/');" >
+                            <td class="room_B1"> Room Number 20</b> </td>
+                            <td class="room_B1"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B2" onclick="redirectToRoom('B21', '/');" >
+                            <td class="room_B2"> Room Number 21</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B3" onclick="redirectToRoom('B22', '/');" >
+                            <td class="room_B3"> Room Number 22</b> </td>
+                            <td class="room_B3"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B4" onclick="redirectToRoom('B23', '/');" >
+                            <td class="room_B4"> Room Number 23</b> </td>
+                            <td class="room_B4"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B5" onclick="redirectToRoom('B24', '/');" >
+                            <td class="room_B5"> Room Number 24</b> </td>
+                            <td class="room_B5"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B6" onclick="redirectToRoom('B25', '/');" >
+                            <td class="room_B6"> Room Number 25</b> </td>
+                            <td class="room_B6"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B7" onclick="redirectToRoom('B26', '/');" >
+                            <td class="room_B7"> Room Number 26</b> </td>
+                            <td class="room_B7"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B8" onclick="redirectToRoom('B27', '/');" >
+                            <td class="room_B8"> Room Number 27</b> </td>
+                            <td class="room_B8"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B9" onclick="redirectToRoom('B28', '/');" >
+                            <td class="room_B9"> Room Number 28</b> </td>
+                            <td class="room_B9"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B10" onclick="redirectToRoom('B29', '/');" >
+                            <td class="room_B2"> Room Number 29</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+                        <tr class="room_B11" onclick="redirectToRoom('B30', '/');" >
+                            <td class="room_B2"> Room Number 30</b> </td>
+                            <td class="room_B2"> <button type="button">Click Me!</button> </td>
+                        </tr>
+
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirectToRoom(newRoomId, newUrl) {
+            localStorage.setItem('send_room_id', newRoomId); 
+            window.location.href = newUrl;
+        }
+    </script>
+</body>
+
+</html>
